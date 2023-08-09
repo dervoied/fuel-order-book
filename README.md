@@ -33,7 +33,7 @@ in order to have permissions to spend the predicate as they please. _Truly excit
 There are 2 predominant dex architecture strategies that have been put into production to date. The first, the uniswap
 style AMM, is an AMM that does not require any off-chain services and is efficient enough to execute entirely in smart
 contracts. There are several downsides to an AMM in terms of capital efficiency. The second DEX has been the off-chain order
-book with on-chain settlement. This is the DYDX, 0x, OpenSea strategy. This architecture includes one off-chain component: the order book and one on-chain component: the settlement. Moving the order-book off-chain saves a ton of gas because you never need to store the orders on the expensive chain, BUT this has a centralized component, which is a target for regulation and has the downside of censorship and liveness problems.
+book with on-chain settlement. This is the DYDX, 0x, OpenSea strategy. This architecture includes the order book and one on-chain component: the settlement. Moving the order-book off-chain saves a ton of gas because you never need to store the orders on the expensive chain, BUT this has a centralized component, which is a target for regulation and has the downside of censorship and liveness problems.
 
 The new architecture that is uniquely enabled by Fuel labs is a fully on-chain order book using predicates. In the case of predicates, there is no expensive writing to state problem because creating an order is just a simple transfer, as long as there is some data availability layer that allows the public to observe the orders that exists somewhere, they can fully be verified on chain by checking the balance of the predicate.
 
